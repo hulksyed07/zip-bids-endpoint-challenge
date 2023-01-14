@@ -16,13 +16,17 @@ group :development, :test do
   gem 'brakeman', '~> 5.4'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2'
+  # For generaing API Documentation using rspec test cases
   gem 'rspec_api_documentation', '~> 6.1'
   gem 'rspec-rails', '~> 5.1'
+  # For ensuring the code follows best practices
   gem 'rubocop', '~> 1.43', require: false
 end
 
 group :test do
+  # For cleaning test database while running rspec
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  # For generaing Fake test data
   gem 'faker', '~> 3.1'
 end
 
