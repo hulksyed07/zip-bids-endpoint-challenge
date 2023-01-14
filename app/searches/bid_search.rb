@@ -1,3 +1,4 @@
+# Class to handle search filters in Bids and return qualified bids
 class BidSearch
   attr_accessor :countries, :categories, :channels
   attr_reader :bids
