@@ -1,0 +1,17 @@
+{
+  "resources": [
+    {
+      "name": "Bid",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Search Bids",
+          "link": "bid/search_bids.json",
+          "groups": "all",
+          "route": "/bids",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

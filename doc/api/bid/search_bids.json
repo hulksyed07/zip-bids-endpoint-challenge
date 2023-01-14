@@ -1,0 +1,38 @@
+{
+  "resource": "Bid",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/bids",
+  "description": "Search Bids",
+  "explanation": "Search Bids based on countries, categories and channels combination",
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/bids?countries=us%2Cuk&categories=finance%2Csports&channels=ca%2Cga",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "countries": "us,uk",
+        "categories": "finance,sports",
+        "channels": "ca,ga"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"bids\": [\n    {\n      \"country\": \"us\",\n      \"category\": \"finance\",\n      \"channel\": \"ca\",\n      \"amount\": \"4.0\"\n    },\n    {\n      \"country\": \"us\",\n      \"category\": \"finance\",\n      \"channel\": \"ga\",\n      \"amount\": \"2.0\"\n    },\n    {\n      \"country\": \"us\",\n      \"category\": \"sports\",\n      \"channel\": \"ca\",\n      \"amount\": \"2.0\"\n    },\n    {\n      \"country\": \"us\",\n      \"category\": \"sports\",\n      \"channel\": \"ga\",\n      \"amount\": \"2.0\"\n    },\n    {\n      \"country\": \"uk\",\n      \"category\": \"finance\",\n      \"channel\": \"ca\",\n      \"amount\": \"1.0\"\n    },\n    {\n      \"country\": \"uk\",\n      \"category\": \"finance\",\n      \"channel\": \"ga\",\n      \"amount\": \"1.0\"\n    },\n    {\n      \"country\": \"uk\",\n      \"category\": \"sports\",\n      \"channel\": \"ca\",\n      \"amount\": \"3.0\"\n    },\n    {\n      \"country\": \"uk\",\n      \"category\": \"sports\",\n      \"channel\": \"ga\",\n      \"amount\": \"3.0\"\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/bids?countries=us%2Cuk&categories=finance%2Csports&channels=ca%2Cga\" -X GET \\\n\t-H \"Content-Type: application/json\""
+    }
+  ]
+}
