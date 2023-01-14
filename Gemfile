@@ -19,6 +19,11 @@ group :development, :test do
   gem 'rspec_api_documentation', '~> 6.1'
 end
 
+group :test do
+  gem 'faker', '~> 3.1'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+end
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
