@@ -3,5 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe Bid, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :all do
+    4.times { create(:bid) }
+  end
+
+  it 'should get count of existing bids' do
+    expect(Bid.count).to eq 4
+  end
 end
