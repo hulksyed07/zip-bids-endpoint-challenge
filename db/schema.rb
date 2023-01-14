@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2021_06_08_100421) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_14_105101) do
   create_table "bids", force: :cascade do |t|
     t.string "country"
     t.string "category"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_06_08_100421) do
     t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["country", "category", "channel"], name: "index_bids_on_country_and_category_and_channel"
   end
 
 end
