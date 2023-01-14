@@ -11,14 +11,14 @@ RSpec.describe 'BidSearch' do
     bid_search.call
     expect(bid_search.bids).to match_array(
       [
-        { country: 'us', category: 'finance', channel: 'ca', amount: BigDecimal('4.0') },
-        { country: 'us', category: 'finance', channel: 'ga', amount: BigDecimal('2.0') },
-        { country: 'us', category: 'sports', channel: 'ca', amount: BigDecimal('2.0') },
-        { country: 'us', category: 'sports', channel: 'ga', amount: BigDecimal('2.0') },
-        { country: 'uk', category: 'finance', channel: 'ca', amount: BigDecimal('1.0') },
-        { country: 'uk', category: 'finance', channel: 'ga', amount: BigDecimal('1.0') },
-        { country: 'uk', category: 'sports', channel: 'ca', amount: BigDecimal('3.0') },
-        { country: 'uk', category: 'sports', channel: 'ga', amount: BigDecimal('3.0') }
+        { country: 'us', category: 'finance', channel: 'ca', amount: 4.0 },
+        { country: 'us', category: 'finance', channel: 'ga', amount: 2.0 },
+        { country: 'us', category: 'sports', channel: 'ca', amount: 2.0 },
+        { country: 'us', category: 'sports', channel: 'ga', amount: 2.0 },
+        { country: 'uk', category: 'finance', channel: 'ca', amount: 1.0 },
+        { country: 'uk', category: 'finance', channel: 'ga', amount: 1.0 },
+        { country: 'uk', category: 'sports', channel: 'ca', amount: 3.0 },
+        { country: 'uk', category: 'sports', channel: 'ga', amount: 3.0 }
       ]
     )
   end
