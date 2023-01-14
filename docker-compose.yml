@@ -5,5 +5,17 @@ services:
   volumes:
    - .:/app
    - bundle:/bundle
+ web:
+  build: .
+  command: bundle exec rails s
+  environment:
+   - RAILS_ENV=development
+  volumes:
+   - .:/app
+   - bundle:/bundle
+  ports:
+    - 3000:3000
+  network_mode: 'host'
+
 volumes:
   bundle:
