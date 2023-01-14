@@ -32,7 +32,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl -g \"http://localhost:3000/bids?countries=us%2Cuk&categories=finance%2Csports&channels=ca%2Cga\" -X GET \\\n\t-H \"Content-Type: application/json\""
+      "curl": "curl -g \"http://localhost:3000/bids?countries=us%2Cuk&categories=finance%2Csports&channels=ca%2Cga\" -X GET \\\n\t-H \"Version: HTTP/1.0\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }
