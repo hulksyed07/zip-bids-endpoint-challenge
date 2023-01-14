@@ -28,6 +28,8 @@ group :test do
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
   # For generaing Fake test data
   gem 'faker', '~> 3.1'
+  # For Generating Test Coverage
+  gem 'simplecov', '~> 0.22.0', require: false
 end
 
 group :development do
