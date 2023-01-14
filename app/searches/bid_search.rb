@@ -1,7 +1,5 @@
 class BidSearch
-  attr_accessor :countries
-  attr_accessor :categories
-  attr_accessor :channels
+  attr_accessor :countries, :categories, :channels
   attr_reader :bids
 
   def initialize(params)
@@ -15,7 +13,7 @@ class BidSearch
     @countries.each do |country|
       @categories.each do |category|
         @channels.each do |channel|
-          amount = Bid.select("amount")
+          amount = Bid.select('amount')
                       .where(country: [country, '*'], category: [category, '*'], channel: [channel, '*'])
                       .order(Arel.sql("(CASE
                                 WHEN (country != '*' AND category != '*' AND channel != '*') THEN 1

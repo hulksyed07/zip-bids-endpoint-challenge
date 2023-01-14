@@ -2,7 +2,7 @@ RSpec.describe 'BidSearch' do
   before do
     create(:bid, country: 'us', category: 'finance', channel: 'ca', amount: 4.0)
     create(:bid, country: 'uk', category: 'sports', channel: '*', amount: 3.0)
-    create(:bid, country: 'us', category: '*' , channel: '*', amount: 2.0)
+    create(:bid, country: 'us', category: '*', channel: '*', amount: 2.0)
     create(:bid, country: '*', category: '*', channel: '*', amount: 1.0)
   end
 
