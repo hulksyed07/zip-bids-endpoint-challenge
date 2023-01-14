@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :bid do
-    country { 'us' }
-    category { 'categ1' }
-    channel { 'ca' }
-    amount { 9.99 }
+    country { Faker::Address.unique.country_code }
+    category { Faker::Lorem.unique.characters(number: 6) }
+    channel { Faker::Lorem.unique.characters(number: 2) }
+    amount { Faker::Number.decimal(l_digits: 2) }
   end
 end
