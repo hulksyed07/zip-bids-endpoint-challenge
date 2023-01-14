@@ -3,9 +3,9 @@ class BidSearch
   attr_reader :bids
 
   def initialize(params)
-    @countries = params[:countries].split(',')
-    @categories = params[:categories].split(',')
-    @channels = params[:channels].split(',')
+    @countries = (params[:countries] || '*').split(',')
+    @categories = (params[:categories] || '*').split(',')
+    @channels = (params[:channels] || '*').split(',')
   end
 
   def call
@@ -26,7 +26,7 @@ class BidSearch
                                 WHEN (country = '*' AND category = '*' AND channel = '*') THEN 8
                                 ELSE 8
                               END)"))
-                      .first.amount
+                      .first&.amount
           @bids << { country: country, category: category, channel: channel, amount: amount }
         end
       end
