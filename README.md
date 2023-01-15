@@ -66,10 +66,40 @@ The app can be run either locally or using Docker. If Ruby 3.1 is not installed 
 $  docker-compose run app bundle exec rspec
 ```
 
+#### How to generate API Documentation
+
+```bash
+$  docker-compose run app bundle exec rake docs:generate
+```
+
+#### How to run rubocop
+
+```bash
+$  docker-compose run app bundle exec rubocop
+```
+
+#### How to run brakeman
+
+```bash
+$  docker-compose run app bundle exec brakeman
+```
+
 #### How to run Rails console
 
 ```bash
 $  docker-compose run app bundle exec rails console
+```
+
+#### How to run Bundle Install
+
+```bash
+$  docker-compose run app bundle install
+```
+
+#### How to run Rails server
+
+```bash
+$  docker-compose run web
 ```
 
 ### Submitting Code

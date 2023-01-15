@@ -1,4 +1,4 @@
-class CreateBids < ActiveRecord::Migration[6.0]
+class CreateBids < ActiveRecord::Migration[7.0]
   def change
     create_table :bids do |t|
       t.string :country
